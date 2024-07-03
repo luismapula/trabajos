@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:proyect1/options/general_data.dart';
 class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Drawer(
+
+
+      ),
       appBar: AppBar(
         toolbarHeight: 140,
         backgroundColor: Colors.teal.shade400,
@@ -34,7 +38,7 @@ class Homescreen extends StatelessWidget {
               height: 550,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(30), // Bordes redondeados
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.5),
@@ -43,8 +47,12 @@ class Homescreen extends StatelessWidget {
                     offset: const Offset(0, 3),
                   ),
                 ],
+                border: Border.all(
+                  color: Colors.grey, // Color del borde negro
+                  width: 3, // Grosor del borde
+                ),
               ),
-              child: const Center(
+              child: Center(
                 child: Text(
                   'Rectángulo en el centro',
                   textAlign: TextAlign.center,
@@ -54,7 +62,6 @@ class Homescreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                  
               ),
             ),
           ),
